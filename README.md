@@ -99,7 +99,7 @@ wasp39b-atmospheric-analysis/
 ├── data/                                # Data directory (FITS files not included)
 │   └── README.md                        # Data acquisition instructions
 ├── CONTRIBUTORS.md                      # Project attribution and acknowledgments
-└── README.md                            # This file
+└── README.md                            # Information about the analysis
 ```
 
 ## Getting Started
