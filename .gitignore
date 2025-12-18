@@ -1,0 +1,65 @@
+# FITS Data Files (too large for git)
+*.fits
+*.fit
+data/*.fits
+data/*.fit
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Output files
+figures/*.png
+figures/*.pdf
+figures/*.jpg
+*.png
+*.pdf
+
+# MCMC output
+samples/
+chains/
+*.h5
+*.hdf5
+
+# Logs
+*.log
+
+# OS
+Thumbs.db

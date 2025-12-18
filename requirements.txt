@@ -1,0 +1,23 @@
+# Core Scientific Computing
+numpy>=1.21.0
+scipy>=1.7.0
+matplotlib>=3.4.0
+
+# Astronomy & FITS Handling
+astropy>=5.0.0
+
+# MCMC Bayesian Inference
+emcee>=3.1.0
+
+# Jupyter Notebook Support
+jupyter>=1.0.0
+ipython>=7.0.0
+
+# Image Processing (if needed)
+scikit-image>=0.19.0
+
+# Optional: For better plotting
+seaborn>=0.11.0
+
+# Optional: For corner plots (MCMC visualization)
+corner>=2.2.0
