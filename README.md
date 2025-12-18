@@ -16,6 +16,48 @@ This project analyzes James Webb Space Telescope (JWST) spectroscopic observatio
 - **Bayesian inference**: Implemented MCMC parameter estimation using `emcee`
 - **Systematic effects**: Modeled stellar contamination from star spots
 
+## Results
+
+### Molecular Absorption Detection
+
+The analysis successfully identified molecular absorption features in WASP-39b's atmosphere:
+
+![Molecular Absorption Features](figures/Molecular_Absorption_Features.png)
+*Transmission spectrum showing identified molecular absorption lines for CO₂ (red), H₂O (blue), and Na (purple). The spectrum clearly shows absorption dips at characteristic wavelengths, confirming the presence of these molecules in the exoplanet's atmosphere.*
+
+### MCMC Parameter Estimation
+
+Bayesian inference was used to estimate atmospheric parameters:
+
+![Observed vs Best-Fit Model](figures/Observed_vs_Bestfit_Model.png)
+*Comparison of observed spectrum (green) with the best-fit forward model (orange) from MCMC sampling. The model successfully captures major spectral features, demonstrating the effectiveness of Bayesian parameter estimation.*
+
+### Data Processing Quality
+
+High-quality spectral extraction from 1,611 FITS extensions:
+
+![Combined Spectrum](figures/Combined_and_Smoothed_Transmission_Spectrum.png)
+*Combined and smoothed transmission spectrum from all FITS extensions with flux error bars. The clean spectrum demonstrates successful noise reduction through Savitzky-Golay filtering and binning.*
+
+### Stellar Contamination Analysis
+
+Systematic effects from stellar spots were modeled:
+
+![Stellar Spots Effect](figures/Effect_of_Stellar_Spots_on_WASP-39b_Spectrum.png)
+*Comparison of pristine stellar spectrum (blue dashed) vs. spectrum with 30% spot coverage (red). This analysis helps quantify systematic uncertainties from stellar contamination.*
+
+### Transit Depth Measurements
+
+**Transit Depths at Key Wavelengths:**
+- CO₂ at 4.3 µm: ~91% absorption
+- CO₂ at 2.0 µm: ~86% absorption  
+- H₂O at 1.4 µm: ~67% absorption
+- H₂O at 2.7 µm: ~91% absorption
+
+**Best-Fit Parameters:**
+- Temperature: ~800 K
+- Molecular abundances successfully constrained through MCMC
+
 ## Technical Implementation
 
 ### Data Processing Pipeline
@@ -31,18 +73,6 @@ This project analyzes James Webb Space Telescope (JWST) spectroscopic observatio
 - **Forward Model**: Simulates atmospheric transmission based on temperature and molecular abundances
 - **MCMC Sampling**: 64 walkers × 5,000 steps to explore parameter space
 - **Parameter Estimation**: Temperature, CO₂, H₂O, and CH₄ abundances with uncertainty quantification
-
-### Results
-
-**Transit Depths (Representative Values):**
-- CO₂ at 4.3 µm: ~91% absorption
-- CO₂ at 2.0 µm: ~86% absorption  
-- H₂O at 1.4 µm: ~67% absorption
-- H₂O at 2.7 µm: ~91% absorption
-
-**Best-Fit Parameters:**
-- Temperature: ~800 K
-- Molecular abundances successfully constrained through MCMC
 
 ## Technologies Used
 
@@ -60,9 +90,14 @@ This project analyzes James Webb Space Telescope (JWST) spectroscopic observatio
 wasp39b-atmospheric-analysis/
 ├── wasp39b_atmospheric_analysis.ipynb  # Main analysis notebook
 ├── requirements.txt                     # Python dependencies
+├── figures/                             # Analysis output plots
+│   ├── Molecular_Absorption_Features.png
+│   ├── Observed_vs_Bestfit_Model.png
+│   ├── Combined_and_Smoothed_Transmission_Spectrum.png
+│   ├── Effect_of_Stellar_Spots_on_WASP-39b_Spectrum.png
+│   └── (additional plots)
 ├── data/                                # Data directory (FITS files not included)
 │   └── README.md                        # Data acquisition instructions
-├── figures/                             # Output plots (generated on runtime)
 ├── CONTRIBUTORS.md                      # Project attribution and acknowledgments
 └── README.md                            # This file
 ```
@@ -78,7 +113,7 @@ wasp39b-atmospheric-analysis/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/wasp39b-atmospheric-analysis.git
+git clone https://github.com/NiviGiridharan/wasp39b-atmospheric-analysis.git
 cd wasp39b-atmospheric-analysis
 ```
 
@@ -168,7 +203,7 @@ See `CONTRIBUTORS.md` for complete project context and acknowledgments.
 
 - JWST Science Team for making data publicly available
 - Mikulski Archive for Space Telescopes (MAST) for data hosting
-- Course: Projects in Data Science, [Your University]
+- Course: Projects in Data Science, Florida State University
 - Inspiration: Europa Clipper mission and ongoing search for habitable worlds
 - Special thanks to my course teammate for their contributions to the initial analysis
 
@@ -179,8 +214,7 @@ This project is available for educational and research purposes.
 ## Contact
 
 For questions or collaboration opportunities:
-- **Name**: Niveda Giridharan
-- **Email**: niveda1998@gmail.com
+- **Name**: Nivi Giridharan
 - **GitHub**: [@NiviGiridharan](https://github.com/NiviGiridharan)
 - **LinkedIn**: [Niveda Giridharan](https://www.linkedin.com/in/niveda-giridharan-b8836217a/)
 
